@@ -5,6 +5,7 @@ before_install:
   - docker build -t docker-react-image .
 script: 
   - docker run -e CI=true docker-react-image npm run test
+language: generic
 deploy: 
   provider: elasticbeanstalk
   region: "us-east-2"
